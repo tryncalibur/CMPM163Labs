@@ -23,7 +23,7 @@ src="../three.js-master/examples/js/loaders/GLTFLoader.js"></script>
       camera.position.z = 200;
 
       var light = new THREE.PointLight(0xffffff, 1, 1000);
-      light.position.set(50, 0, -50);
+      light.position.set(20, 50, 100);
       scene.add(light);
 
       var loader = new THREE.GLTFLoader();
@@ -36,6 +36,32 @@ src="../three.js-master/examples/js/loaders/GLTFLoader.js"></script>
           gltf.scene.scale.y = 35;
           gltf.scene.scale.z = 35;
 
+      }, function (xhr) {
+          console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
+      }, function (error) {
+          console.error(error);
+      });
+
+      var loader2 = new THREE.GLTFLoader();
+      loader2.load('books.glb', function (gltf) {
+          scene.add(gltf.scene);
+          gltf.scene.position.z = 80;
+          gltf.scene.position.x = 20;
+          gltf.scene.rotation.y = -20;
+          gltf.scene.rotation.z = 15;
+      }, function (xhr) {
+          console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
+      }, function (error) {
+          console.error(error);
+      });
+
+      var loader3 = new THREE.GLTFLoader();
+      loader2.load('rabbit.glb', function (gltf) {
+          scene.add(gltf.scene);
+          gltf.scene.position.y = 35;
+          gltf.scene.position.z = 40;
+          gltf.scene.rotation.x = 0;
+          gltf.scene.rotation.z = 50;
       }, function (xhr) {
           console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
       }, function (error) {
