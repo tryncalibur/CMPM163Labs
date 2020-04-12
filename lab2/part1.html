@@ -27,6 +27,22 @@
             scene.add(cube);
             camera.position.z = 5; //this moves the camera towards the viewer
 
+
+            var geometry2 = new THREE.BoxGeometry();
+            var material2 = new THREE.MeshBasicMaterial( {color: 0x123456} );
+            var cube2 = new THREE.Mesh(geometry2, material2);
+            scene.add(cube2);
+
+            geometry2.translate(-1.5, 0, 0);
+
+            var geometry3 = new THREE.BoxGeometry();
+            var material3 = new THREE.MeshBasicMaterial( {color: 0xA5B453} );
+            var cube3 = new THREE.Mesh(geometry3, material3);
+            scene.add(cube3);
+
+            geometry3.translate(1.5, 0, 0);
+
+
             geometry.scale(1.2, 1.2, 1.2);
 
             var s = 0;
@@ -52,6 +68,21 @@
 
                 geometry.scale(sc, 1, 1);
                 geometry.translate(0, 0, tr);
+
+
+
+                geometry2.rotateY(0.01);
+
+                var cc = 0;
+                if (b == 0) cc = 0.99;
+                else if (b == 1) cc = 1.01;
+
+                geometry2.scale( cc, cc, cc );
+
+                //geometry3.translate(-1.5, 0 ,0);
+                geometry3.rotateZ(0.02);
+                geometry3.rotateX(0.05);
+                //geometry3.translate(1.5, 0, 0);
 
             }
             animate();
