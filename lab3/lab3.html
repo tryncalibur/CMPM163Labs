@@ -14,6 +14,7 @@
 
 
             var geometry1, material1, mesh1;
+            var geometry2, material2, mesh2;
 
             function addCoolCube() {
                 if(count == 2) {
@@ -111,6 +112,19 @@
             var cube = new THREE.Mesh( geometry, material );
             scene.add(cube);
 
+
+
+            // setup the cube
+            var geometry4 = new THREE.BoxGeometry();
+            var material4 = new THREE.MeshLambertMaterial( { color: 0x684185, emissive: 0x554ae8, reflectivity: 0.75 });
+
+            var cube4 = new THREE.Mesh( geometry4, material4 );
+            cube4.position.y = -2;
+            scene.add(cube4);
+
+
+
+
             // add the light
             var light = new THREE.PointLight(0xffffff, 1, 1000);
             light.position.set(10, 10, 10);
@@ -120,6 +134,10 @@
                 requestAnimationFrame(animate);
                 geometry.rotateX(0.01);
                 geometry.rotateY(0.01);
+
+                geometry4.rotateX(0.01);
+                geometry4.rotateY(0.01);
+
                 renderer.render(scene, camera);
 
                 if(geometry1) {
