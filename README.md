@@ -12,7 +12,7 @@ Spot Light: A light emitting in a cone shape from one point, like a flashlight.
 Directional Light: A Distant light that emits an ambient like light but only in one direction, like the sun.
 Area Light: A light used to subtly illuminate a surface, like a glow from a neon sign.
 
-![](lab6/Pics/Real_Comp.png) 
+![](lab6/Pics/Real_Comp.jpg) 
 ![](lab6/Pics/Texture_Comp.png)
 I attempted to make the material look like my table by changing the albedo to a dark gray, almost black with some what high roughness since the dust and finish on my table makes the specular reflection dim.
 
