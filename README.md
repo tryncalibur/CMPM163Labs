@@ -3,7 +3,7 @@ a) Part 1
 
 
 i.
-![](Lab8/ref/jpg)
+![](Lab8/ref.jpg)
 
 ii.
 ![](Lab8/Screenshot.png)
