@@ -15,4 +15,4 @@ iv.
 Lab was created in a new folder/project
 
 d.
-At the time of completion, partner has not responded to msgs.
+my partner did part 2, found determination of grid height and value to be somewhat difficult, liked the perlin noise texture. We only checked in with eachother at the end of the lab.
